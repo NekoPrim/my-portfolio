@@ -1,0 +1,22 @@
+.about-margin {
+    display: flex;
+    direction: row;
+    max-width: 1048px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.App-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.App-link {
+    font-size: 24px;
+    color: blueviolet;
+    text-decoration: none;
+    &:hover {
+        color: #9370dc;
+    }
+}

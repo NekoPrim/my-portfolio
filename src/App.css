@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  background-color: black;
+  font-family: 'Comfortaa';
+  background-size: cover;
+}
+
+.App-header {
+  background-image: url("https://images.pexels.com/photos/249203/pexels-photo-249203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position-x: center;
+  background-position-y: 30%;
+  background-size: cover;
+  opacity: 0.6;
+  height: 300px;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.App-header-name {
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+  opacity: none;
+  text-align: center;
+  transform: translate(0, 50%);
+}
+
+.App-header-sub-name {
+  font-size: 32px;
+}
+
+.App-text {
+  color: #d3d3d3;
+  padding: 24px;
+  line-height: 24px;
+}
+
+.App-image {
+  height: 200px;
+  border: 1px solid #939393;
+  border-radius: 4px;
+  align-self: center;
+}
+
+.App-container {
+  border-bottom: 1px solid #939393;
+  padding: 24px;
+  color: #d3d3d3;
+}
+
+.App-title {
+  font-family: 'Zilla Slab Highlight';
+  color: blueviolet;
+  font-size: 32px;
+}
+
+.Form.Control {
+  background-color: #939393;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} */

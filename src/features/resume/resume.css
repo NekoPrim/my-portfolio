@@ -1,0 +1,72 @@
+.resume-title {
+    font-family: 'Zilla Slab Highlight';
+    color: blueviolet;
+    font-size: 32px;
+}
+
+.resume-form {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 24px;
+}
+
+.resume-label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.resume-text {
+    max-width: 1048px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-stack {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    max-width: 1048px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-skills {
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.resume-skills-title {
+    font-weight: bold;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.resume-skills-info {
+    text-align: left;
+    padding-left: 4px;
+}
+
+.resume-info {
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+    max-width: 1048px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.resume-info-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.resume-info-note {
+    text-align: left;
+    margin-top: 4px;
+    color: #939393;
+}
