@@ -1,12 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { ScreenSize } from './app/ScreenSize';
+import { About } from './features/about/About';
+import { Projects } from './features/projects/Projects';
+import { Resume } from './features/resume/Resume';
+import { Contact } from './features/contact/Contact';
+import { Credits } from './features/credits/Credits';
 import './App.css';
 
 function App() {
+  const { windowDimension } = ScreenSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
+        <div className='App-header-name'>
+          <div>Desiree Quade</div>
+          <div className='App-header-sub-name'>software engineer</div>
+        </div>
+        <div></div>
+      </header>
+      { windowDimension.width >= 508 ?
+        (
+          <>
+            <About />
+            <Projects />
+            <Resume />
+            <Contact />
+            <Credits />
+          </>
+        ) : (
+          null
+        )
+    }
+       
+
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
@@ -50,7 +79,7 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
     </div>
   );
 }

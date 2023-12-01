@@ -1,0 +1,41 @@
+.contact {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    margin: 24px auto 24px auto;
+    max-width: 1048px;
+    /* text-align: center; */
+}
+
+/* .contact-info {
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+} */
+
+.contact-form {
+    display: flex;
+    direction: column;
+    margin-bottom: 16px;
+}
+
+.contact-label {
+    padding-right: 24px;
+}
+
+.contact-input {
+    background-color: #d3d3d3;
+    border-radius: 4px;
+}
+
+.contact-error {
+    padding-bottom: 16px;
+    color: blueviolet;
+    font-weight: bold;   
+}
+
+.contact-image {
+    &:hover {
+        border: 1px solid blueviolet;
+    }
+}

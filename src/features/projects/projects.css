@@ -1,0 +1,50 @@
+.projects-title {
+    font-family: 'Zilla Slab Highlight';
+    color: blueviolet;
+    font-size: 32px;
+}
+
+.project {
+    display: flex;
+    direction: row;
+    justify-content: center;
+    margin: 24px auto 24px auto;
+    /* margin-top: 24px; */
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+    max-width: 1048px;
+}
+
+.project-info {
+    color: #d3d3d3;
+    line-height: 24px;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.project-type {
+    color: gray;
+}
+
+.project-video-container {
+    display: flex;
+    direction: row;
+    justify-content: center;
+}
+
+.project-video {
+    border: 1px solid #939393;
+    border-radius: 4px;
+    height: 200px;
+    align-self: center;
+    margin-right: 16px;
+}
+
+.project-build {
+    color: #d3d3d3;
+    line-height: 24px;
+}
