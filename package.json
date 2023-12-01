@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "homepage": "https://nekoprim.github.io/my-portfolio",
+  "homepage": "https://NekoPrim.github.io/my-portfolio",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
