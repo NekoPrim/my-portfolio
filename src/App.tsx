@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScreenSize } from './app/ScreenSize';
+// import { ScreenSize } from './app/ScreenSize';
 import { About } from './features/about/About';
 import { Projects } from './features/projects/Projects';
 import { Resume } from './features/resume/Resume';
@@ -8,7 +8,7 @@ import { Credits } from './features/credits/Credits';
 import './App.css';
 
 function App() {
-  const { windowDimension } = ScreenSize();
+  // const { windowDimension } = ScreenSize();
 
   return (
     <div className='App'>
@@ -19,19 +19,19 @@ function App() {
         </div>
         <div></div>
       </header>
-      { windowDimension.width >= 508 ?
+      {/* { windowDimension.width >= 508 ?
         (
-          <>
+          <> */}
             <About />
             <Projects />
             <Resume />
             <Contact />
             <Credits />
-          </>
+          {/* </>
         ) : (
           null
-        )
-    }
+        ) */}
+    {/* } */}
        
 
 
