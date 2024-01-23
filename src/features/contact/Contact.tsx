@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-// import { MyButton } from '../resusable/MyButton';
 import { validate } from '../../app/util';
+import { ScreenSize } from '../../app/ScreenSize';
 import pups from '../../images/pups.jpg'
 import './contact.css';
 
@@ -12,6 +12,8 @@ declare global {
 };
 
 export const Contact = () => {
+    const { windowDimension } = ScreenSize();
+
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
@@ -41,60 +43,77 @@ export const Contact = () => {
             <div className='App-title'>
                 Contact
             </div>
+            { (windowDimension.width < 800) ? (
+                <div className='contact-image-container'>
+                    <img src={pups} className='App-image contact-image' alt='' />
+                </div>
+            ) : (
+                null
+            )}
             <div className='contact'>
                 <div className='contact-info'>
                     <Form.Group
-                        className="contact-form"
+                        className='contact-form'
+                        controlId='yourName'
                     >
                         <Form.Label className='contact-label'>
                             Your name:
-                        </Form.Label>
-                        <Form.Control
+                            <Form.Control
                             size='lg'
                             className='contact-input'
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
+                        </Form.Label>
                     </Form.Group>
                     <Form.Group
-                        className="contact-form"
-                        controlId="exampleForm.ControlInput1"
+                        className='contact-form'
+                        controlId='yourEmail'
                     >
                         <Form.Label className='contact-label'>
                             Your email:
-                        </Form.Label>
-                        <Form.Control
-                            type="email"
+                            <Form.Control
+                            type='email'
                             size='lg'
-                            placeholder="text@example.com"
+                            placeholder='text@example.com'
                             className='contact-input'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        </Form.Label>
                     </Form.Group>
-                    <Form.Group className="contact-form" controlId="exampleForm.ControlTextarea1">
+                    <Form.Group
+                        className='contact-form'
+                        controlId='yourMessage'
+                    >
                         <Form.Label className='contact-label'>
                             Message:
-                        </Form.Label>
-                        <Form.Control
-                            as="textarea"
+                            <Form.Control
+                            as='textarea'
                             rows={5}
                             size='lg'
                             className='contact-input'
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
+                        </Form.Label>
                     </Form.Group>
-                    {error ?
-                        <Container className='contact-error'>
-                            ** {error} **
-                        </Container>
-                        : null}
-                    <Button onClick={onSend}>
-                        Submit
-                    </Button>
+                    <div className='contact-submit-area'>
+                        {error ?
+                            <Container className='contact-error'>
+                                ** {error} **
+                            </Container>
+                            : null}
+                        <Button onClick={onSend} className='contact-button'>
+                            Submit
+                        </Button>
+                    </div>
                 </div>
-                <img src={pups} className='App-image contact-image' alt='' />
+                { (windowDimension.width >= 800) ? (
+                    <img src={pups} className='App-image contact-image' alt='' />
+                ) : (
+                    null
+                )}
             </div>
         </Container>
     );

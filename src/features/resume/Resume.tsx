@@ -1,10 +1,15 @@
-import { Container, Form, Stack } from "react-bootstrap";
-import { skills, experience, education } from "../../app/data";
+import { Container, Form, Stack } from 'react-bootstrap';
+import { experience, education } from '../../app/data';
+import { ScreenSize } from '../../app/ScreenSize';
+import { Skills } from './Skills';
 import './resume.css';
+import { Carousely } from './Carousely';
 
 export const Resume = () => {
+    const { windowDimension } = ScreenSize();
+
     return (
-        <Container className="App-container">
+        <Container className='App-container'>
             <div className='App-title'>
                 Resume
             </div>
@@ -20,57 +25,15 @@ export const Resume = () => {
                 <Form.Label className='resume-label'>
                     Skills
                 </Form.Label>
-                <Stack direction='horizontal' className='resume-stack'>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>Languages</div>
-                        <div className='resume-skills-info'>
-                            {skills.languages.map((language) => (
-                                <li key={language}>{language}</li>
-                            ))}
-                        </div>
+                { windowDimension.width > 992 ? (
+                    <Skills />
+                ) : (
+                    <div className='resume-carousel-container' >
+                        <Carousely />
                     </div>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>Libraries</div>
-                        <div className='resume-skills-info'>
-                            {skills.libraries.map((library) => (
-                                <li key={library}>{library}</li>
-                            ))}
-                        </div>
-                    </div>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>FrameWorks</div>
-                        <div className='resume-skills-info'>
-                            {skills.frameWorks.map((framework) => (
-                                <li key={framework}>{framework}</li>
-                            ))}
-                        </div>
-                    </div>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>Tools</div>
-                        <div className='resume-skills-info'>
-                            {skills.tools.map((tool) => (
-                                <li key={tool}>{tool}</li>
-                            ))}
-                        </div>
-                    </div>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>TCP</div>
-                        <div className='resume-skills-info'>
-                            {skills.TCPs.map((TCP) => (
-                                <li key={TCP}>{TCP}</li>
-                            ))}
-                        </div>
-                    </div>
-                    <div className='resume-skills'>
-                        <div className='resume-skills-title'>Ect.</div>
-                        <div className='resume-skills-info'>
-                            {skills.ect.map((x) => (
-                                <li key={x}>{x}</li>
-                            ))}
-                        </div>
-                    </div>
-                </Stack>
+                )}
             </Form.Group>
+            
             <Form.Group className='resume-form'>
                 <Form.Label className='resume-label'>
                     Experience
@@ -102,9 +65,9 @@ export const Resume = () => {
                 <Form.Label className='resume-label'>
                     Education
                 </Form.Label>
-                <Stack>
+                <Stack className='resume-stack'>
                     {education.map((school) => (
-                        <div key={school.id} className='resume-info'>
+                        <div key={school.id} className='resume-info-edu'>
                             <div className='resume-info-title'>
                                 <div>{school.name}</div>
                                 <div>{school.date}</div>

@@ -4,14 +4,7 @@
     justify-content: space-around;
     margin: 24px auto 24px auto;
     max-width: 1048px;
-    /* text-align: center; */
 }
-
-/* .contact-info {
-    background-color: #161c20;
-    border-radius: 4px;
-    padding: 8px;
-} */
 
 .contact-form {
     display: flex;
@@ -20,12 +13,30 @@
 }
 
 .contact-label {
-    padding-right: 24px;
+    /* padding-right: 24px; */
+    text-align: start;
 }
 
 .contact-input {
     background-color: #d3d3d3;
     border-radius: 4px;
+    &&:focus {
+        background-color: #d3d3d3;
+        border-color: #9370dc;
+    }
+}
+
+/* .contact-submit-area {
+    align-content: end;
+} */
+
+.contact-button {
+    background-color: blueviolet;
+    border-color: #9370dc;
+    &&:hover {
+        background-color: #9370dc;
+        border-color: blueviolet;
+    }
 }
 
 .contact-error {
@@ -38,4 +49,10 @@
     &:hover {
         border: 1px solid blueviolet;
     }
+}
+
+.contact-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
 }

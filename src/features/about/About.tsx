@@ -1,5 +1,5 @@
-import { Container, Nav } from "react-bootstrap";
-import { ScreenSize } from "../../app/ScreenSize";
+import { Container, Nav } from 'react-bootstrap';
+import { ScreenSize } from '../../app/ScreenSize';
 import pupsAndI from '../../images/pupsAndI.jpg';
 import './about.css';
 

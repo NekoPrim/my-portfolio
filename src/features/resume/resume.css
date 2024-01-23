@@ -19,12 +19,15 @@
     max-width: 1048px;
     margin-left: auto;
     margin-right: auto;
+    color: #d3d3d3;
+    font-size: 16px;
 }
 
 .resume-stack {
     display: flex;
     direction: row;
     justify-content: space-between;
+    align-items: start;
     max-width: 1048px;
     margin-left: auto;
     margin-right: auto;
@@ -47,6 +50,20 @@
     padding-left: 4px;
 }
 
+.resume-carousel-container {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-carousel {
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+    color: #939393;
+    width: 250px;
+    height: 344px;
+}
+
 .resume-info {
     background-color: #161c20;
     border-radius: 4px;
@@ -55,6 +72,18 @@
     max-width: 1048px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+}
+
+.resume-info-edu {
+    background-color: #161c20;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 1048px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     text-align: left;
 }
 
@@ -70,3 +99,7 @@
     margin-top: 4px;
     color: #939393;
 }
+
+/* .resume-education {
+    max-width: 1048px;
+} */
