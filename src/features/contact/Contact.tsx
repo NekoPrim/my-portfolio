@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Toast } from 'react-bootstrap';
 import { validate } from '../../app/util';
 import { ScreenSize } from '../../app/ScreenSize';
 import pups from '../../images/pups.jpg'
@@ -18,6 +18,7 @@ export const Contact = () => {
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
     const [error, setError] = useState<string>('');
+    const [sent, setSent] = useState<boolean>(false);
 
     const onSend = () => {
         const contactError: string = validate(name, email, message);
@@ -31,7 +32,12 @@ export const Contact = () => {
                     From: email,
                     Subject: name,
                     Body: message,
-                }).then()
+                }).then(
+                    setName(''),
+                    setEmail(''),
+                    setMessage(''),
+                    setSent(true)
+                )
             } catch (e) {
                 throw e;
             }
@@ -103,7 +109,17 @@ export const Contact = () => {
                             <Container className='contact-error'>
                                 ** {error} **
                             </Container>
-                            : null}
+                        : null}
+                        { sent ?
+                            <Toast className='contact-toast' onClose={() => setSent(false)}>
+                                <Toast.Header className='contact-toast-header'>
+                                    Success!
+                                </Toast.Header>
+                                <Toast.Body className='contact-toast-body'>
+                                    Thank you, your email has been sent.
+                                </Toast.Body>
+                            </Toast>
+                        : null}
                         <Button onClick={onSend} className='contact-button'>
                             Submit
                         </Button>

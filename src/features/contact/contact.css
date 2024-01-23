@@ -26,9 +26,22 @@
     }
 }
 
-/* .contact-submit-area {
-    align-content: end;
-} */
+.contact-toast {
+    position: absolute;
+    border-color: blueviolet;
+}
+
+.contact-toast-header {
+    background-color: #9370dc;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-toast-body {
+    color: blueviolet;
+}
 
 .contact-button {
     background-color: blueviolet;

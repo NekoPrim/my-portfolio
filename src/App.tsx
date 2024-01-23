@@ -6,6 +6,7 @@ import { Resume } from './features/resume/Resume';
 import { Contact } from './features/contact/Contact';
 import { Credits } from './features/credits/Credits';
 import './App.css';
+import { Container, NavDropdown, Navbar } from 'react-bootstrap';
 
 function App() {
   // const { windowDimension } = ScreenSize();
@@ -17,13 +18,30 @@ function App() {
           <div>Desiree Quade</div>
           <div className='App-header-sub-name'>software engineer</div>
         </div>
-        <div></div>
       </header>
+      <Navbar>
+        <Container>
+          <NavDropdown
+            title='menu'
+            id='menu-dropdown'
+            className='menu'
+          >
+            <NavDropdown.Item
+              href='about'
+              className='menu-item'
+            >
+              about
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Container>
+      </Navbar>
+
       <About />
       <Projects />
       <Resume />
       <Contact />
       <Credits />
+
     </div>
   );
 }

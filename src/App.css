@@ -59,6 +59,16 @@
   background-color: #939393;
 }
 
+.menu {
+  font: 'Zilla Slab Highlight';
+  color: blueviolet;
+  font: 32px;
+}
+
+.menu-item {
+  background-color: #939393;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
