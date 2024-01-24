@@ -3,7 +3,6 @@
     direction: row;
     justify-content: space-around;
     margin: 24px auto 24px auto;
-    /* max-width: 1048px; */
 }
 
 .contact-form {
@@ -13,7 +12,6 @@
 }
 
 .contact-label {
-    /* padding-right: 24px; */
     text-align: start;
 }
 
