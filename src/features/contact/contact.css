@@ -3,7 +3,7 @@
     direction: row;
     justify-content: space-around;
     margin: 24px auto 24px auto;
-    max-width: 1048px;
+    /* max-width: 1048px; */
 }
 
 .contact-form {
@@ -20,6 +20,8 @@
 .contact-input {
     background-color: #d3d3d3;
     border-radius: 4px;
+    width: 450px;
+    max-width: 500px;
     &&:focus {
         background-color: #d3d3d3;
         border-color: #9370dc;

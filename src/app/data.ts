@@ -173,8 +173,103 @@ export const theme = {
         darkWhite: '#939393',
         black: '#000000',
         charcoal: '#161c20',
-        purple: '#8a2be2',
+        purple: '#8a2be2' || 'blueviolet',
         lightPurple: '#9370dc'
     },
     light: {},
 };
+
+export const game = [
+    {
+        id: 1,
+        question: 'Desiree has experience with React-Native.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 2,
+        question: 'Desiree has worked at Ergotron, Kyros, and Minnesota State University.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'false',
+    },
+    {
+        id: 3,
+        question: 'Desiree has 2 dogs',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 4,
+        question: 'I have already visited Desiree`s LinkedIn.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 5,
+        question: 'I have already found the easter egg on this site!',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 6,
+        question: 'This webpage uses Redux.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 7,
+        question: 'One of the projects on this page uses C++.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'false',
+    },
+    {
+        id: 8,
+        question: 'Reveal was a solo project.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'false',
+    },
+    {
+        id: 9,
+        question: 'Desiree has worked with MQTT.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true',
+    },
+    {
+        id: 10,
+        question: 'This website is not responsive.',
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'false',
+    },
+];
+
+// export const result = {};
