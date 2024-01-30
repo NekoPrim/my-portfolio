@@ -1,10 +1,24 @@
-import { Container, Stack } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container, Stack, Button, Popover, OverlayTrigger } from 'react-bootstrap';
 import { ScreenSize } from '../../app/ScreenSize';
 import { projects } from '../../app/data';
 import './projects.css';
 
 export const Projects = () => {
     const { windowDimension } = ScreenSize();
+    const [build, setBuild] = useState<number>(0);
+
+    const popover = (
+        <Popover id='project-popover'>
+            <Popover.Body>
+                <ul className='project-build-side'>
+                    {projects[build].build.map((text) => (
+                        <li key={text.tool}>{text.tool}</li>
+                    ))}
+                </ul>
+            </Popover.Body>
+        </Popover>
+    );
 
     return (
         <Container className='App-container'>
@@ -29,13 +43,29 @@ export const Projects = () => {
                             <div className='project-video-container'>
                                 <iframe className='project-video' src={project.video} title={project.title}>
                                 </iframe>
-                                <ul className='project-build-side'>
-                                    {project.build.map((text) => (
-                                        <li key={text.tool}>{text.tool}</li>
-                                    ))}
-                                </ul>
+                                { windowDimension.width > 515 ? (
+                                    <ul className='project-build-side'>
+                                        {project.build.map((text) => (
+                                            <li key={text.tool}>{text.tool}</li>
+                                        ))}
+                                    </ul>
+                                ) : null}
                             </div>
                         : null}
+                        { windowDimension.width < 515 ? (
+                            <OverlayTrigger
+                                trigger='click'
+                                placement='bottom'
+                                overlay={popover}
+                            >
+                            <Button
+                                className='project-button'
+                                onClick={() => setBuild(project.id)}
+                            >
+                                Technologies
+                            </Button>
+                            </OverlayTrigger>
+                        ): null}
                         <div className='project-description'>
                             {project.description}
                         </div>

@@ -12,16 +12,17 @@ import './App.css';
 function App() {
   const { windowDimension } = ScreenSize();
   const [show, setShow] = useState(true);
-  const [isOpen, setIsOpen] =useState<boolean>(false);
 
   return (
     <div className='App'>
+
       <header className='App-header' id='1'>
         <div className='App-header-name'>
           <div>Desiree Quade</div>
           <div className='App-header-sub-name'>software engineer</div>
         </div>
       </header>
+
       { (windowDimension.width <= 550) ?
         (<Alert
             show={show}
@@ -35,12 +36,13 @@ function App() {
           </p>
         </Alert>)
       : null}
-      <Dropdown as={NavItem} className='App-nav' role='button' autoClose='outside'>
-          <Dropdown.Toggle as={NavLink} data-bs-toggle='App-nav' className='App-nav-toggle'>
+
+      <Dropdown as={NavItem} className='App-nav'>
+          <Dropdown.Toggle as={NavLink} className='App-nav-toggle'>
             menu
           </Dropdown.Toggle>
-          <Dropdown.Menu variant='dark' className='App-nav-menu' show={isOpen}>
-            <Dropdown.Item href='#1' className='App-nav-item' onSelect={() => setIsOpen(false)}>
+          <Dropdown.Menu variant='dark' className='App-nav-menu'>
+            <Dropdown.Item href='#1' className='App-nav-item'>
               top
             </Dropdown.Item>
             <Dropdown.Item href='#2' className='App-nav-item'>

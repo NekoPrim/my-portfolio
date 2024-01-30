@@ -19,7 +19,9 @@
     background-color: #d3d3d3;
     border-radius: 4px;
     width: 450px;
-    max-width: 500px;
+    @media only screen and (max-width: 515px) {
+        width: 300px;
+    }
     &&:focus {
         background-color: #d3d3d3;
         border-color: #9370dc;

@@ -62,7 +62,7 @@ export const Contact = () => {
                         className='contact-form'
                         controlId='yourName'
                     >
-                        <Form.Label className='contact-label'>
+                        <Form.Label className='contact-label' id='your-name'>
                             Your name:
                             <Form.Control
                             size='lg'
@@ -76,7 +76,7 @@ export const Contact = () => {
                         className='contact-form'
                         controlId='yourEmail'
                     >
-                        <Form.Label className='contact-label'>
+                        <Form.Label className='contact-label' id='your-email'>
                             Your email:
                             <Form.Control
                             type='email'
@@ -92,7 +92,7 @@ export const Contact = () => {
                         className='contact-form'
                         controlId='yourMessage'
                     >
-                        <Form.Label className='contact-label'>
+                        <Form.Label className='contact-label' id='your-message'>
                             Message:
                             <Form.Control
                             as='textarea'

@@ -1,6 +1,6 @@
 export const projects = [
     {
-        id: 1,
+        id: 0,
         title: 'Reveal',
         type: 'Group Project',
         description: 'The status quo of inaccessible information, misleading claims, and corporate virtue signaling largely prevents consumers from easily using their purchasing power to make change. Reveal equips users with the knowledge and tools to amplify their impact by incentivizing direct engagement with companies, legislators, and communities of like-minded individuals.',
@@ -19,7 +19,7 @@ export const projects = [
         video: 'https://www.youtube.com/embed/qa510qXZOV8',
     },
     {
-        id: 2,
+        id: 1,
         title: 'Unicorn Rancher',
         type: 'Solo Project',
         description: 'Do you wish that life was more simple? Do you feel like you should be rewarded answering easy questions? Wouldnt life be a little better with some sparkle? Unicorn Rancher is simple, fun, and adds some sparkle to your life! All you have to do is answer some simple unicorn questions to recieve an amazing badge. Be the best Unicorn Rancher by collecting all the badges!',
@@ -37,10 +37,10 @@ export const projects = [
         video: 'https://www.youtube.com/embed/fbwvg-eIHxE',
     },
     {
-        id: 3,
+        id: 2,
         title: 'Resume',
         type: 'Solo Project',
-        description: 'This application. I encourage you to look around this site and send me an email if you would like to connect. This application was designed to be website and mobile compatible.  Also checkout the game located on the home page!',
+        description: 'This resume before refacturing for GH-pages compatibility. I encourage you to look around this site and send me an email if you would like to connect.  This application has responsive design! Also dont forget easter eggs (>.<)',
         build: [
             { tool: 'React.js' },
             { tool: 'TypeScript' },

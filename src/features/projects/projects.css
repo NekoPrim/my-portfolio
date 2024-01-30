@@ -47,3 +47,17 @@
     color: #d3d3d3;
     line-height: 24px;
 }
+
+.project-button {
+    margin: 8px auto 8px auto;
+    background-color: blueviolet;
+    border-color: #9370dc;
+    &&:hover {
+        background-color: #9370dc;
+        border-color: blueviolet;
+    }
+}
+
+/* .project-overlay {
+    z-index: 2;
+} */

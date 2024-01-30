@@ -13,6 +13,7 @@
   background-size: cover;
   opacity: 0.6;
   height: 300px;
+  width: 100%;;
   align-items: center;
   border-bottom: 1px solid white;
 }
@@ -24,6 +25,9 @@
   opacity: none;
   text-align: center;
   transform: translate(0, 50%);
+  @media only screen and (max-width: 515px) {
+    transform: translate(0, 15%);
+  }
 }
 
 .App-header-sub-name {
@@ -38,14 +42,18 @@
 
 .App-nav-toggle {
   position: fixed;
+  z-index: 2;
   background-color: blueviolet;
-  color: #939393;
+  color: #d3d3d3;
   font-size: 24px;
   font-weight: bold;
   padding: 8px;
   border-radius: 50%;
-  /* margin-left: 24px; */
   right: 24px;
+  /* top: 50%; */
+  @media only screen and (max-width: 515px) {
+    top: 45%;
+  }
 }
 
 .App-nav-item {
@@ -66,17 +74,11 @@
   align-self: center;
 }
 
-/* @keyframes App-image {
-  0%{
-    
-  }
-  to{}
-} */
-
 .App-container {
   border-bottom: 1px solid #939393;
   padding: 24px;
   color: #d3d3d3;
+  width: 100%;
 }
 
 .App-title {
@@ -85,22 +87,9 @@
   font-size: 32px;
 }
 
-.Form.Control {
-  background-color: #939393;
-}
-
 .App-alert {
   position: absolute;
-}
-
-.menu {
-  font: 'Zilla Slab Highlight';
-  color: blueviolet;
-  font: 32px;
-}
-
-.menu-item {
-  background-color: #939393;
+  margin-right: 108px;
 }
 
 /* .App-logo {
